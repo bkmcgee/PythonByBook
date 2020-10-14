@@ -1,0 +1,43 @@
+#Chapter 4 continued 10/14/2020
+
+#Exception
+
+a= input("Type a number:")
+b= input("Type a number:")
+a = int(a)
+b = int(b)
+try:
+  print(a/b)
+except ZeroDivisionError:
+  print("your second number cannot be zero")
+
+#now adding value restrictions
+
+
+try:
+  a1= input("Type a number:")
+  b1= input("Type a number:")
+  a1 = int(a1)
+  b1 = int(b1)
+  print(a1/b1)
+except (ZeroDivisionError, ValueError):
+  print("your second number cannot be zero, or invalid input")
+  #don't use variables defined in try block in the except block
+
+#Docstrings
+#good practice to write out what the function and its parameters will do
+x1 = 12
+y1 = 13
+
+def add(x1,y1):
+  """
+  Returns x1 + y1
+  :param x1: int.
+  :param y1: int.
+  :return: int sum of x1 and y1.
+  """
+
+  return x1+y1
+print(add(x1,y1))
+
+
